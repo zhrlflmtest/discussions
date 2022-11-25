@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+:root {
+    --pink: #ff046f;
+    --violet: #c63bfa;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background: var(--pink);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.heading {
+    font-size: 4rem;
+    color: var(--pink);
+    text-align: center;
+    padding: 0 1rem;
+    padding-top: 6rem;
+    letter-spacing: .2rem;
+    font-weight: 500;
+}
+
+.title {
+    padding: 0 1rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    color: #aaa;
+}
+
+header {
+    width: 96%;
+    background: #fff;
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: .2s;
+}
+
+.header-active {
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header .navbar ul li {
+    margin: 0 1rem;
+}
+
+header .navbar ul li a {
+    font-size: 2rem;
+    color: var(--pink);
+    transition: .2s;
+}
+
+header .navbar ul li .active,
+header .navbar ul li a:hover {
+    color: var(--violet);
+}
+
+header .logo {
+    font-size: 2.5rem;
+    color: var(--violet);
+    text-transform: uppercase;
+}
+
+header .logo i {
+    color: var(--pink);
+    padding: 0 .2rem;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: var(--pink);
+    cursor: pointer;
+    display: none;
+    transition: .2s;
+}
+
+.home {
+    min-height: 100vh;
+    background: linear-gradient(rgba(198, 59, 250, .8), rgba(198, 59, 250, .8)), url(../img/school-supplies-3033204.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.home .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-top: 14rem;
+    padding-bottom: 8rem;
+    text-align: center;
+}
+
+.home .content h1 {
+    font-size: 5rem;
+    color: #fff;
+    padding: 0 1rem;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+    text-transform: uppercase;
+}
+
+.home .content p {
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 2rem;
+}
+
+.home .content button {
+    height: 4rem;
+    width: 20rem;
+    border-radius: 5rem;
+    background: var(--pink);
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .2s;
+    border: none;
+    box-shadow: 0rem .3rem 1rem rgba(0, 0, 0, .3);
+}
+
+.home .content button:hover {
+    letter-spacing: .2rem;
+    transform: scale(1.1);
+}
+
+.home .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home .container .kotak {
+    height: 20rem;
+    width: 25rem;
+    background: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .5);
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.home .container .kotak i {
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background: var(--violet);
+    font-size: 3rem;
+    margin: 2rem 0;
+    transition: .2s;
+}
+
+.home .container .kotak h3 {
+    font-size: 2rem;
+    color: var(--pink);
+    transition: .2s;
+}
+
+.home .container .kotak p {
+    font-size: 1.3rem;
+    padding: .7rem 2rem;
+    color: #666;
+}
+
+.home .container .kotak:hover i {
+    background: var(--pink);
+}
+
+.home .container .kotak:hover h3 {
+    color: var(--violet);
+}
+
+.home .container .kotak:hover {
+    box-shadow: 0 1rem .5rem rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    bottom: -25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 70vh solid #fff;
+    width: 120%;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.about .baris {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .baris .image img {
+    height: 70vh;
+    width: 50vw;
+}
+
+.about .baris .content {
+    padding-left: 5rem;
+}
+
+.about .baris .content h3 {
+    font-size: 3rem;
+    color: var(--pink);
+}
+
+.about .baris .content p {
+    font-size: 1.6rem;
+    color: #999;
+    padding: 1rem 0;
+}
+
+.about .baris .content button {
+    height: 3.5rem;
+    width: 17rem;
+    background: var(--violet);
+    color: #fff;
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0 .3rem 1rem rgba(0, 0, 0, .3);
+    cursor: pointer;
+    font-size: 2rem;
+    transition: .2s;
+}
+
+.about .baris .content button:hover {
+    background: var(--pink);
+    color: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+    transform: scale(1.1);
+}
+
+.teacher {
+    background: #f9f9f9;
+}
+
+.teacher .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.teacher .container .card {
+    padding: 2rem;
+    margin: 2rem;
+    background: #fff;
+    text-align: center;
+    width: 28rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+}
+
+.teacher .container .card img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale();
+    transition: .3s;
+}
+
+.teacher .container .card:hover img {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+.teacher .container .card h3 {
+    color: var(--pink);
+    font-size: 2rem;
+    padding: .5rem 0;
+}
+
+.teacher .container .card p {
+    font-size: 1.7rem;
+    color: #666;
+}
+
+.teacher .container .card .icons a {
+    font-size: 1.9rem;
+    padding: 1.5rem .5rem;
+    color: var(--pink);
+}
+
+.teacher .container .card:hover {
+    box-shadow: 0 1rem .5rem rgba(0, 0, 0, .3);
+}
+
+.teacher .container .card .icons a:hover {
+    color: var(--violet);
+    transition: 1.5s;
+    transform: rotate(360deg);
+}
+
+.course .container {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.course .container .kotak {
+    height: 18rem;
+    width: 25rem;
+    margin: 3.5rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: .3rem .3rem 0 .1rem var(--violet), .5rem .5rem .5rem rgba(0, 0, 0, .3);
+}
+
+.course .container .kotak i {
+    height: 10rem;
+    width: 10rem;
+    line-height: 8rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background: var(--pink);
+    margin-top: -4rem;
+    border: 1rem solid #fff;
+    border-left: 1rem solid var(--pink);
+    border-right: 1rem solid var(--pink);
+    box-shadow: 0 0 0 1rem #fff inset;
+    font-size: 3.5rem;
+}
+
+.course .container .kotak h3 {
+    font-size: 2rem;
+    color: var(--violet);
+}
+
+.course .container .kotak p {
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 0;
+}
+
+.course .container .kotak:hover {
+    transform: scale(1.1);
+    transition: 1.2s;
+    cursor: pointer;
+}
+
+.review {
+    background: #f9f9f9;
+}
+
+.review .container {
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.review .container .kotak {
+    width: 28rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+    background: #fff;
+    margin: 4rem 2rem;
+}
+
+.review .container .kotak img {
+    height: 8.5rem;
+    width: 8.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -4rem;
+    border: .6rem solid var(--pink);
+    border-left: .6rem solid var(--violet);
+    border-bottom: .6rem solid var(--violet);
+}
+
+.review .container .kotak h3 {
+    font-size: 2rem;
+    color: var(--pink);
+    padding: 0 .5rem;
+}
+
+.review .container .kotak p {
+    font-size: 1.4rem;
+    color: #999;
+    padding: 0 1.3rem;
+}
+
+.review .container .kotak .bintang i {
+    font-size: 1.6rem;
+    color: var(--violet);
+    padding: 1.3rem .1rem;
+}
+
+.review .container .kotak:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.contact {
+    background: #333;
+}
+
+.contact .baris {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+.contact .baris .image img {
+    width: 50vw;
+    height: 70vh;
+}
+
+.contact .baris .form-container {
+    width: 50%;
+    padding-right: 6rem;
+}
+
+.contact .baris .form-container input,
+textarea {
+    height: 4rem;
+    width: 100%;
+    background: #fff;
+    border: none;
+    border-radius: 5rem;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    color: var(--pink);
+    font-size: 1.7rem;
+    transition: .2s linear;
+}
+
+.contact .baris .form-container input:focus,
+textarea:focus {
+    border: .2rem solid var(--pink);
+}
+
+.contact .baris .form-container textarea {
+    height: 20rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    resize: none;
+}
+
+.contact .baris .form-container input[type="submit"] {
+    width: 17rem;
+    background: var(--pink);
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: .2s;
+}
+
+.contact .baris .form-container input[type="submit"]:hover {
+    background: none;
+    color: var(--pink);
+    border: .2rem solid var(--pink);
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer .icon {
+    padding: 3rem 0;
+}
+
+.footer .icon a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.2rem;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--violet);
+    border: .2rem solid var(--violet);
+    font-size: 2rem;
+    margin: 0 .1rem;
+    transition: .2s linear;
+}
+
+.footer .icon a:hover {
+    color: #fff;
+    background: var(--pink);
+    border-color: var(--pink);
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.footer .akhir {
+    font-size: 2rem;
+    border-top: .1rem solid #999;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    color: #666;
+    width: 90%;
+    padding: 1rem 0;
+}
+
+.footer .akhir span {
+    color: var(--pink);
+}
+
+header .fa-times {
+    transform: rotate(180deg);
+    color: var(--violet);
+}
+
+/* media queries*/
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: fixed;
+        top: -100rem;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-radius: 1rem;
+        opacity: 0;
+        transition: .2s linear;
+    }
+
+    header .navbar ul {
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+
+    header .navbar ul li {
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header .navbar ul li a {
+        font-size: 3rem;
+        display: block;
+    }
+
+    header .nav-toggle {
+        top: 5.5rem;
+        opacity: 1;
+    }
+
+    .home .contact p {
+        padding: 1.5rem 2rem;
+    }
+
+    .home::before {
+        display: none;
+    }
+
+    .about .baris {
+        flex-flow: column-reverse;
+    }
+
+    .about .baris .image img {
+        height: 60vh;
+        width: 90vw;
+    }
+
+    .about .baris .content {
+        padding: 0 2.5rem;
+    }
+
+    .course .container {
+        width: 100%;
+    }
+
+    .contact .baris {
+        flex-flow: column;
+    }
+
+    .contact .baris .image img {
+        height: 50vh;
+        width: 90vw;
+    }
+
+    .contact .baris .form-container {
+        width: 90%;
+        padding: 0;
+    }
+}
